@@ -14,7 +14,8 @@ import java.awt.event.ActionEvent;
 public class AttackAircraftPanel {
 
 	private JFrame frame;
-	private AttackAircrafts aircraft;
+
+    private  ITransport aircraft; 
 	private JPanel Panel;
 
 	/**
@@ -52,8 +53,8 @@ public class AttackAircraftPanel {
 		
 		Random rnd = new Random();
 		
-		JButton btnNewButton = new JButton("\u0421\u043E\u0437\u0434\u0430\u0442\u044C ");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton ButtonCreateAttackAircraft = new JButton("\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0448\u0442\u0443\u0440\u043C\u043E\u0432\u0438\u043A");
+		ButtonCreateAttackAircraft.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				aircraft = new AttackAircrafts(rnd.nextInt(100) + 300, rnd.nextInt(1000) + 2000, Color.GRAY, Color.DARK_GRAY, true, true, true);
 				aircraft.SetPosition(rnd.nextInt(100) + 300, rnd.nextInt(100) + 100, 550, 500);
@@ -65,48 +66,64 @@ public class AttackAircraftPanel {
 				Panel.repaint();
 			}
 		});
-		btnNewButton.setBounds(122, 414, 89, 23); 
-		frame.getContentPane().add(btnNewButton);
+		ButtonCreateAttackAircraft.setBounds(63, 414, 163, 23); 
+		frame.getContentPane().add(ButtonCreateAttackAircraft);
 
-		JButton btnNewButton_2 = new JButton("<<");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton Button_Right = new JButton("<<");
+		Button_Right.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				aircraft.MoveTransport(Direction.Left);
 				Panel.repaint();
 			}
 		});
-		btnNewButton_2.setBounds(269, 414, 57, 23);
-		frame.getContentPane().add(btnNewButton_2);
+		Button_Right.setBounds(238, 414, 57, 23);
+		frame.getContentPane().add(Button_Right);
 
-		JButton btnNewButton_3 = new JButton(">>");
-		btnNewButton_3.addActionListener(new ActionListener() {
+		JButton Button_Left = new JButton(">>");
+		Button_Left.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				aircraft.MoveTransport(Direction.Right);
 				Panel.repaint();
 			}
 		});
-		btnNewButton_3.setBounds(435, 414, 57, 23);
-		frame.getContentPane().add(btnNewButton_3);
+		Button_Left.setBounds(398, 414, 57, 23);
+		frame.getContentPane().add(Button_Left);
 
-		JButton btnNewButton_4 = new JButton("v");
-		btnNewButton_4.addActionListener(new ActionListener() {
+		JButton Button_Down = new JButton("v");
+		Button_Down.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				aircraft.MoveTransport(Direction.Down);
 				Panel.repaint();
 			}
 		});
-		btnNewButton_4.setBounds(336, 427, 89, 23);
-		frame.getContentPane().add(btnNewButton_4);
+		Button_Down.setBounds(299, 427, 89, 23);
+		frame.getContentPane().add(Button_Down);
 
-		JButton btnNewButton_1 = new JButton("^");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		JButton Button_Up = new JButton("^");
+		Button_Up.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				aircraft.MoveTransport(Direction.Up);
 				Panel.repaint();
 			}
 		});
-		btnNewButton_1.setBounds(336, 402, 89, 23);
-		frame.getContentPane().add(btnNewButton_1);
+		Button_Up.setBounds(299, 401, 89, 23);
+		frame.getContentPane().add(Button_Up);
+		
+		JButton ButtonCreateAircraft = new JButton("\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0441\u0430\u043C\u043E\u043B\u0435\u0442");
+		ButtonCreateAircraft.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 aircraft = new Aircraft(rnd.nextInt(100) + 300, rnd.nextInt(1000) + 2000, Color.GRAY);
+					aircraft.SetPosition(rnd.nextInt(100) + 300, rnd.nextInt(100) + 100, 550, 500);
+					Panel = new Panel(aircraft);
+					Panel.setBorder(new BevelBorder(BevelBorder.LOWERED, 
+							null, null, null, null));
+					Panel.setBounds(30, 10, 630, 370);
+					frame.getContentPane().add(Panel);
+					Panel.repaint();
+			}
+		});
+		ButtonCreateAircraft.setBounds(479, 414, 163, 23);
+		frame.getContentPane().add(ButtonCreateAircraft);
 	}
 }
