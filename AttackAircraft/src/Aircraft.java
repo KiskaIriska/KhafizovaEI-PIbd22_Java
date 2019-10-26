@@ -7,7 +7,7 @@ public class Aircraft extends FlyingObject {
 	protected final int carHeight = 60;
 	private int numberOfType;
 	private int number;
-
+	
 	public Aircraft(int maxSpeed, float weight, Color mainColor) {
 		this.MaxSpeed = maxSpeed;
 		this.Weight = weight;
@@ -58,13 +58,13 @@ public class Aircraft extends FlyingObject {
 				switch (number) 
 				{
 				case 4:
-					AircraftsGuns.NumberGuns(Number.Four, g, _startPosX, _startPosY);
+					new AircraftsGuns().NumberGuns(Number.Four, g, _startPosX, _startPosY);
 					break;
 				case 5:
-					AircraftsGuns.NumberGuns(Number.Five, g, _startPosX, _startPosY);
+					new AircraftsGuns().NumberGuns(Number.Five, g, _startPosX, _startPosY);
 					break;
 				case 6:
-					AircraftsGuns.NumberGuns(Number.Six, g, _startPosX, _startPosY);
+					new AircraftsGuns().NumberGuns(Number.Six, g, _startPosX, _startPosY);
 					break;
 				}
 		}
@@ -74,13 +74,13 @@ public class Aircraft extends FlyingObject {
 			switch (number) 
 			{
 			case 4:
-				AircraftsGuns_2.NumberGuns(Number.Four, g, _startPosX, _startPosY);
+				new AircraftsGuns_2().NumberGuns(Number.Four, g, _startPosX, _startPosY);
 				break;
 			case 5:
-				AircraftsGuns_2.NumberGuns(Number.Five, g, _startPosX, _startPosY);
+				new AircraftsGuns_2().NumberGuns(Number.Five, g, _startPosX, _startPosY);
 				break;
 			case 6:
-				AircraftsGuns_2.NumberGuns(Number.Six, g, _startPosX, _startPosY);
+				new AircraftsGuns_2().NumberGuns(Number.Six, g, _startPosX, _startPosY);
 				break;
 			}
 		}
@@ -90,13 +90,13 @@ public class Aircraft extends FlyingObject {
 			switch (number) 
 			{
 			case 4:
-				AircraftsGuns_3.NumberGuns(Number.Four, g, _startPosX, _startPosY);
+				new AircraftsGuns_3().NumberGuns(Number.Four, g, _startPosX, _startPosY);
 				break;
 			case 5:
-				AircraftsGuns_3.NumberGuns(Number.Five, g, _startPosX, _startPosY);
+				new AircraftsGuns_3().NumberGuns(Number.Five, g, _startPosX, _startPosY);
 				break;
 			case 6:
-				AircraftsGuns_3.NumberGuns(Number.Six, g, _startPosX, _startPosY);
+				new AircraftsGuns_3().NumberGuns(Number.Six, g, _startPosX, _startPosY);
 				break;
 			}
 

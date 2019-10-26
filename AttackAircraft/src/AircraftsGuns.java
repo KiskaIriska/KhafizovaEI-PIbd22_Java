@@ -9,7 +9,7 @@ enum Number
 }
 public class AircraftsGuns implements IGuns{
 	
-	public static void NumberGuns(Number number, Graphics g,  int x ,int y)
+	public void NumberGuns(Number number, Graphics g,  int x ,int y)
 	{
 		DrawGuns(g,x + 55,y + 5);
 		DrawGuns(g,x + 55,y + 15);
@@ -22,7 +22,7 @@ public class AircraftsGuns implements IGuns{
 
 	}
 	
-	public static void DrawGuns(Graphics g, int x,int y) {	
+	public void DrawGuns(Graphics g, int x,int y) {	
 		g.setColor(Color.BLACK);
 		g.fillRect( x , y + 1, 25, 3);
 		

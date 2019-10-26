@@ -3,7 +3,7 @@ import java.awt.Graphics;
 
 public class AircraftsGuns_2 implements IGuns {
 
-	public static void NumberGuns(Number number, Graphics g, int x, int y) 
+	public  void NumberGuns(Number number, Graphics g, int x, int y) 
 	{
 		g.setColor(Color.BLACK);
 		g.fillRect(x + 50, y + 5, 5, 15);
@@ -29,7 +29,7 @@ public class AircraftsGuns_2 implements IGuns {
 
 	}
 
-	public static void DrawGuns(Graphics g, int x, int y) {
+	public  void DrawGuns(Graphics g, int x, int y) {
 		
 		g.fillRect(x, y + 1, 45, 3);
 
