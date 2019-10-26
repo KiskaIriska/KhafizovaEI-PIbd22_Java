@@ -4,22 +4,23 @@ import java.util.Random;
 
 import javax.swing.JPanel;
 
-public class Panel extends JPanel {
-	//private static AttackAircrafts aircraft;
+public class Panel extends JPanel {	
+	ITransport transport;
 	
-	public Panel(AttackAircrafts array) {
+	
+	public Panel(ITransport transport ) {
+		this.transport = transport;
 		
 	}
-	public Panel(AircraftsGuns array) {
-		
-	}
 	
-
-	
+	//public Panel(AircraftsGuns array) {}
 
 	public void paint(Graphics g) {
 		super.paint(g);
-		AttackAircrafts.DrawAttackAircraft(g);
+		transport.DrawAircraft(g);
+		
+	
+	
 	}
 
 }
